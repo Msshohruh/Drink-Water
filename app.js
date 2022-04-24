@@ -5,14 +5,13 @@ const emptyTitle = document.querySelector('.empty-title')
 
 
 // Loop Version for pro
-for(let i = 0; i < bottles.length; i++) {
-    bottles[i].addEventListener('click', () => {
+bottles.forEach((bottle, ind) => {
+    bottle.addEventListener('click', () => {
         remove()
-        add(i + 1)
-        addRemoveWater(bottles[i], 12.5 * (i+1))
+        add(ind + 1)
+        addRemoveWater(bottle, 12.5 * (ind+1))
     })
-}
-
+})
 // Without Loop Version for undestending
 /*
 const bottle1 = document.querySelector('.bottle--1')
